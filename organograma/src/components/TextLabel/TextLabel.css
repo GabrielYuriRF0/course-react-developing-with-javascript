@@ -1,0 +1,15 @@
+.text-label label{
+    font-size: 22px;
+    display: block;
+    font-weight: 600;
+}
+
+.text-label input{
+    width: 100%;
+    border: none;
+    margin: 14px 0;
+    box-shadow: 10px 10px 30px  rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    box-sizing: border-box;
+
+}
