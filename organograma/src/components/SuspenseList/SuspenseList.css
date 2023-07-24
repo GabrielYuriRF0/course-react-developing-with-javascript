@@ -1,13 +1,14 @@
-.text-label{
+.suspense-list{
     padding-bottom: 25px;
 }
-.text-label label{
+.suspense-list label{
     font-size: 22px;
     display: block;
     font-weight: 600;
 }
 
-.text-label input{
+.suspense-list select{
+    background-color: white;
     font-size: 1.2em;
     width: 100%;
     margin: 6px 0;
@@ -15,5 +16,7 @@
     box-shadow: 10px 10px 30px  rgba(0, 0, 0, 0.2);
     padding: 30px;
     box-sizing: border-box;
-
+    color: gray;
 }
+
+

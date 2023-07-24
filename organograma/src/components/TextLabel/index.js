@@ -1,9 +1,9 @@
 import './TextLabel.css'
-const TextLabel = () => {
+const TextLabel = (props) => {
     return (
         <div className='text-label'>
-            <label>Nome</label>
-            <input placeHolder='Digite seu nome'/>
+            <label>{props.label}</label>
+            <input placeHolder={props.place_holder}/>
         </div>
 
     )
