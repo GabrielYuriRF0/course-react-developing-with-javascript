@@ -1,4 +1,4 @@
-import './SuspenseList.css'
+import './style.css'
 const SuspenseList = (props) => {
     return (
         <div className='suspense-list'>
