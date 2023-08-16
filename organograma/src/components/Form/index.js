@@ -2,32 +2,54 @@ import "./style.css";
 import TextLabel from "../TextLabel/index";
 import SuspenseList from "../SuspenseList/index";
 import Button from "../Button";
+import { useState } from "react";
 
-const Form = () => {
-  const times = [
-    "Programação",
-    "Front-End",
-    "Data-Science",
-    "Devops",
-    "UX e Design",
-    "Mobile",
-    "Inovação e Gestão",
-  ];
+const Form = (props) => {
+  const [nome, setNome] = useState("");
+  const [cargo, setCargo] = useState("");
+  const [imagem, setImagem] = useState("");
+  const [time, setTime] = useState("");
 
   const formSubmit = (event) => {
     event.preventDefault();
-    window.alert("Formulário preenchido com sucesso!");
-
+    props.addColaborador({
+      nome,
+      cargo,
+      imagem,
+      time,
+    });
   };
   return (
     <section className="formulario">
       <form onSubmit={formSubmit}>
         <h2>Preencha os dados para criar o card do colaborador.</h2>
-        <TextLabel required ={true} label="Nome" place_holder="Digite seu nome" />
-        <TextLabel required = {true}label="Cargo" place_holder="Digite seu cargo" />
-        <TextLabel required = {true} label="Senha" place_holder="Digite sua senha" />
-        <TextLabel label="Imagem" place_holder="Informe o endereço da imagem" />
-        <SuspenseList label="Time" itens={times}></SuspenseList>
+        <TextLabel
+          value={nome}
+          update_value={(value) => setNome(value)}
+          required={true}
+          label="Nome"
+          place_holder="Digite seu nome"
+        />
+        <TextLabel
+          value={cargo}
+          update_value={(value) => setCargo(value)}
+          required={true}
+          label="Cargo"
+          place_holder="Digite seu cargo"
+        />
+
+        <TextLabel
+          value={imagem}
+          update_value={(value) => setImagem(value)}
+          label="Imagem"
+          place_holder="Informe o endereço da imagem"
+        />
+        <SuspenseList
+          value={time}
+          update_value={(value) => setTime(value)}
+          label="Time"
+          itens={props.times}
+        ></SuspenseList>
 
         <Button label="Criar card"></Button>
       </form>
