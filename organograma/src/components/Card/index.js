@@ -1,13 +1,13 @@
 import "./style.css";
-const Card = () => {
+const Card = (props) => {
   return (
     <div className="colaborador">
       <div className="cabecalho">
-        <img src="https://github.com/GabrielYuriRF0.png" alt="foto perfil" />
+        <img src={props.imagem} alt={props.nome} />
       </div>
       <div className="rodape">
-        <h4>Gabriel Yuri</h4>
-        <h5>Desenvolvedor</h5>
+        <h4>{props.nome}</h4>
+        <h5>{props.cargo}</h5>
       </div>
     </div>
   );

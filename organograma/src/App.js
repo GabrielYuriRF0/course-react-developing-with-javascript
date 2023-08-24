@@ -2,6 +2,7 @@ import { useState } from "react";
 import Banner from "./components/Banner";
 import Form from "./components/Form/index";
 import Team from "./components/Team";
+import Footer from "./components/Footer";
 
 function App() {
   const [colaboradores, setColaborador] = useState([]);
@@ -54,9 +55,12 @@ function App() {
           name={time.name}
           primaryColor={time.primaryColor}
           secundaryColor={time.secundaryColor}
-          colabodores={colaboradores}
+          colaboradores={colaboradores.filter(
+            (colaborador) => colaborador.time === time.name
+          )}
         ></Team>
       ))}
+      <Footer />
     </div>
   );
 }

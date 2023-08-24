@@ -1,0 +1,16 @@
+.footer {
+  background-color: #6278f7;
+  width: 100%;
+  height: 128px;
+  padding-top: 70px;
+}
+
+#organo-icon {
+  margin: auto;
+  display: block;
+  height: 50%;
+}
+
+#facebook-icon {
+  margin-left: 2rem;
+}
