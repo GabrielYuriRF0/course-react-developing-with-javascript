@@ -2,7 +2,10 @@ import "./style.css";
 const Card = (props) => {
   return (
     <div className="colaborador">
-      <div className="cabecalho">
+      <div
+        className="cabecalho"
+        style={{ backgroundColor: props.primaryColor }}
+      >
         <img src={props.imagem} alt={props.nome} />
       </div>
       <div className="rodape">

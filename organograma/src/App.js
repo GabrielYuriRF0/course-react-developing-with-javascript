@@ -17,7 +17,7 @@ function App() {
       secundaryColor: "#E8F8FF",
     },
     {
-      name: "Data Sciense",
+      name: "Data Science",
       primaryColor: "#A6D157",
       secundaryColor: "#F0F8E2",
     },
